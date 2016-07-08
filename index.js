@@ -18,7 +18,7 @@ app.use(allowCrossDomain);
 // app.get('/v1/tumblr/52dinners', get52DinnerBlog);
 
 // Get the port from environment variables
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || 3002;
 
 app.listen(port);
 console.log('listening on port ', port);
