@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.load();
 const getFlickrPhotos = require('./controllers/api').getFlickrPhotos;
 
-const appPath = `../kHuang`;
+const appPath = `../kathyHuang/dist/`;
 const allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
