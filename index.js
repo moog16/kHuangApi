@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv');
+dotenv.load();
+const getFlickrPhotos = require('./controllers/api').getFlickrPhotos;
 
 const appPath = `../kHuang`;
 const allowCrossDomain = function(req, res, next) {
@@ -14,8 +17,7 @@ app.use(express.static(`${appPath}`));
 app.use(allowCrossDomain);
 
 // routes
-// app.get('/v1/youtube', getYoutubeVideos);
-// app.get('/v1/tumblr/52dinners', get52DinnerBlog);
+app.get('/v1/flickr', getFlickrPhotos);
 
 // Get the port from environment variables
 var port = process.env.PORT || 3002;
