@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.load();
-const getFlickrPhotos = require('./controllers/api').getFlickrPhotos;
+const getFlickrPhotos = require('./controllers/flickr').getFlickrPhotos;
 
 const appPath = `../kathyHuang/dist/`;
 const allowCrossDomain = function(req, res, next) {
